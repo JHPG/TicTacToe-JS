@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		<style>
+			#jogo{ }
+			#jogo td,img{
+				margin:auto;
+				border:0px;
+				height:80px;
+				width:80px;	}
+			#jogo .barrav{
+				height:auto;
+				width:2px;
+				background-color:#333;	}
+			#jogo .barrah{
+				height:2px;
+				width:auto;
+				background-color:#333;	}
+				
+		</style>
+		<script type="text/javascript" src="engine.js"></script>
+	</head>
+	<body onload="reset();">
+	  <div id="jogo">
+		<table style="margin:auto">
+			<tr>
+				<td><img id="c0" src="img/none.png" onclick="joga(0)"></td>
+					<td class="barrav" rowspan=6></td>
+				<td><img id="c1" src="img/none.png" onclick="joga(1)"></td>
+					<td class="barrav" rowspan=6></td>
+				<td><img id="c2" src="img/none.png" onclick="joga(2)"></td>
+			</tr>
+				<tr><td class="barrah" colspan=10></td></tr>
+			<tr>	
+				<td><img id="c3" src="img/none.png" onclick="joga(3)"></td>
+				<td><img id="c4" src="img/none.png" onclick="joga(4)"></td>
+				<td><img id="c5" src="img/none.png" onclick="joga(5)"></td>
+			</tr>
+				<tr><td class="barrah" colspan=10></td></tr>
+			<tr>	
+				<td><img id="c6" src="img/none.png" onclick="joga(6)"></td>
+				<td><img id="c7" src="img/none.png" onclick="joga(7)"></td>
+				<td><img id="c8" src="img/none.png" onclick="joga(8)"></td>
+			</tr>
+			<div style="margin:30px auto; display:table; font-weight:bold;">
+				Alternar para :<input type="button" value="Singleplayer" onclick="alternaSP()"/><input type="button" value="Multiplayer" onclick="alternaMP()"/>
+				<p> |--------- <span id="vez">Vez do _</span> ---------| <span style="font-style:italic;font-weight:normal;" id="SPMP">Multiplayer</span>
+				<input type="button" value="reset" onclick="reset()"></p>
+			</div>
+	  </div>
+	</body>
+</html>
